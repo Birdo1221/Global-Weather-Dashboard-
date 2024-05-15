@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="banner-top">
+        <h3>Weather Details for {{ city }}, {{ country }}</h3>
+    </div>
+
+    <div class="container">
+        <h1>Current Weather</h1>
+        <p>📖 <strong>Weather Description:</strong> {{ description }}</p>
+        <p>🌡️ <strong>Temperature:</strong> {{ temperature }} °C (Feels like {{ temperature_feels }} °C)</p>
+        <p>🌡️ <strong>Max Temperature:</strong> {{ temperature_max }} °C</p>
+        <p>🌡️ <strong>Min Temperature:</strong> {{ temperature_min }} °C</p>
+        <p>💨 <strong>Wind Speed:</strong> {{ wind_speed }} m/s</p>
+        <p>💨 <strong>Wind Direction:</strong> {{ wind_direction }}°</p>
+        <p>💨 <strong>Wind Gust:</strong> {{ wind_gust }}</p>
+        <p>💧 <strong>Humidity:</strong> {{ humidity }}%</p>
+        <p>🌫️ <strong>Pressure:</strong> {{ pressure }} hPa</p>
+        <button class="back-button"><a href="/">Back to Home</a></button>
+        
+    </div>
+    <div class="banner-bottom">
+        <h3>Made with ❤️ by Birdo</h3>
+    </div>
+</body>
+</html>
